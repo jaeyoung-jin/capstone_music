@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+
+{% for music in music %}
+<h1>{{music.title}}</h1>
+<audio controls><source src="{{music.audio_file.url}}" type="audio/wav"></audio>
+
+{%endfor%}
+

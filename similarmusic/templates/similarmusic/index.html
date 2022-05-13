@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+
+<table class = "table-contents" style = "padding: 10px">
+    <tr>
+        <th>노래 번호</th>
+        <th>노래 이름</th>
+    </tr>
+    {% for Dataset in data %}
+    <tr>
+        <td>{{Dataset.music_id}}</td>
+        <td>{{Dataset.musicname}}</td>
+    </tr>
+    
+    {%endfor%}
+
+</table>
