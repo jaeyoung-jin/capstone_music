@@ -22,4 +22,5 @@ urlpatterns = [
     path('data/', views.data_view),
     path('music/', views.play_music),
     path("", include("similarmusic.urls")),
+    path('test/', views.test),
 ]

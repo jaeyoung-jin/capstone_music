@@ -73,6 +73,7 @@ class Dataset(models.Model):
     mfcc19_var = models.FloatField(blank=True, null=True)
     mfcc20_mean = models.FloatField(blank=True, null=True)
     mfcc20_var = models.FloatField(blank=True, null=True)
+    # audio_file = models.FileField(blank=True, null=True)
 
     class Meta:
         managed = False
@@ -80,13 +81,16 @@ class Dataset(models.Model):
 
 
 class Document(models.Model):
-    title = models.CharField(max_length = 300)
+    title = models.CharField(max_length = 500, null = True,blank = True)
     uploadedFile = models.FileField(upload_to = "Uploaded Files/")
     dateTimeOfUpload = models.DateTimeField(auto_now = True)
 
 
+
 class Music(models.Model):
-    title = models.CharField(max_length = 300)
+    music_title = models.CharField(max_length = 300)
     audio_file = models.FileField()
+
+
 
 

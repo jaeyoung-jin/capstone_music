@@ -9,6 +9,7 @@ urlpatterns = [
     path("", views.uploadFile, name = "uploadFile"),
     path('data/', views.data_view, name="showing data"),
     path('music/', views.play_music, name = "playing music"),
+    path('test/', views.test, name = "view test"),
 ]
 
 if settings.DEBUG: 
